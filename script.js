@@ -91,7 +91,7 @@ let app = new Vue({
                 month: convertMonth(today.getMonth()),
                 year: today.getFullYear(),
                 hour: (today.getHours() % 12 === 0) ? 12 : today.getHours() % 12,
-                minutes: today.getMinutes(),
+                minutes: ("0" + today.getMinutes()).slice(-2),
                 amPm: (today.getHours() / 12 < 1) ? "AM" : "PM"
             })
             this.addedName = ""
